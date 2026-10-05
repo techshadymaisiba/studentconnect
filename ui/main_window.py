@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import (
 
 from services.activity_manager import ActivityManager
 from ui.activities_page import ActivitiesPage
-
+from ui.search_page import SearchPage
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
         self.pages = QStackedWidget()
 
         self.pages.addWidget(QLabel("Home Page"))
-        self.pages.addWidget(QLabel("Search Page"))
+        self.pages.addWidget(SearchPage(self.manager))
         self.pages.addWidget(ActivitiesPage(self.manager))
         self.pages.addWidget(QLabel("My List Page"))
 
