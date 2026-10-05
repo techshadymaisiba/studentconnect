@@ -14,8 +14,8 @@ from PyQt6.QtCore import Qt
 class MyListPage(QWidget):
     """Display activities saved by the user."""
 
-    def __init__(self, my_list):
-        """Initialize the My List page with the saved activities."""
+    def __init__(self, my_list, on_back):
+        """Initialize the My List page with saved activities and a back callback."""
         super().__init__()
 
         self.my_list = my_list
@@ -38,6 +38,7 @@ class MyListPage(QWidget):
         layout.addLayout(buttons)
 
         remove_button.clicked.connect(self.remove_selected)
+        back_button.clicked.connect(on_back)
 
         self.refresh()
 
