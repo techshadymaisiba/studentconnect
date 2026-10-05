@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Sports Day",
+        "date": "23 September",
+        "time": "10:30 AM",
+        "location": "Sports Grounds",
+        "description": "Join us for a fun-filled day of sports and activities!"
+    },
+    {
+        "name": "Movie Night",
+        "date": "27 September",
+        "time": "5:00 PM",
+        "location": "Student Hall",
+        "description": "Enjoy a night of entertainment with your favorite movies and snacks."
+    },
+    {
+        "name": "Cultural Day",
+        "date": "30 September",
+        "time": "11:00 AM",
+        "location": "Main Campus",
+        "description": "Experience the creati"
+    },
+    {
+        "name": "Gaming Competition",
+        "date": "5 October",
+        "time": "2:00 PM",
+        "location": "Student Lounge",
+        "description": "Show off your gaming skills and compete for exciting prizes!"
+    }
+
+]
