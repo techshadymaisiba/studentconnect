@@ -6,6 +6,8 @@ from PyQt6.QtWidgets import (
 from services.activity_manager import ActivityManager
 from ui.activities_page import ActivitiesPage
 from ui.search_page import SearchPage
+from models.my_list import MyList
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -37,12 +39,13 @@ class MainWindow(QMainWindow):
         main_layout.addLayout(menu_layout)
 
         self.manager = ActivityManager("data/activities.json")
+        self.my_list = MyList()
 
         self.pages = QStackedWidget()
 
         self.pages.addWidget(QLabel("Home Page"))
         self.pages.addWidget(SearchPage(self.manager))
-        self.pages.addWidget(ActivitiesPage(self.manager))
+        self.pages.addWidget(ActivitiesPage(self.manager, self.my_list))
         self.pages.addWidget(QLabel("My List Page"))
 
         main_layout.addWidget(self.pages)
